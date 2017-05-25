@@ -1,0 +1,63 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+?>
+//<?php include("include/header.php");
+//?>
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="utf-8">
+<title>Welcome to the Catering</title>
+<link rel="stylesheet" href="catering.css" type="text/css">
+
+
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<a href="index.html"><img src="Images/logo.jpg" width="254" height="69" alt="Website Logo"></a>
+        <div id="acctop">
+        <?php
+            echo "Hello " . $_SESSION["user"] . ".<br/>";
+            echo "This is the main page";
+
+        ?> 
+        <form id="main" action="login.php" method="post">
+        <input id="submit" name="submit" value="Logout" type="submit">
+       
+        </input>
+        </form>
+        </div>
+	</div>
+	<div id="container">
+    
+	<div id="content">
+		<h1>Catering Options</h1>
+		
+		<div class="mainimg">
+		<a href="index2.html"><img src="Images/op1.jpg" width="225" height="118" alt="Option 1"></a>
+		</div>
+        <div class="mainimg">
+		<a href="index2.html"><img src="Images/op2.jpg" width="225" height="118" alt="Option 1"></a>
+		</div>
+        <div class="mainimg">
+		<a href="index2.html"><img src="Images/op3.jpg" width="225" height="118" alt="Option 1"></a>
+		</div>
+        <div class="mainimg">
+		<a href="index2.html"><img src="Images/op4.jpg" width="225" height="118" alt="Option 1"></a>
+		</div>
+        
+	</div>
+        </div>
+	<div id="footer" align=right>
+		<p>Thomas Carlton - A00903666, Jacky Chuo - A00827985<br>
+			Set1D
+		</p>
+	</div>
+
+    </div>    
+</body>
+</html>
+//<?php include("include/footer.php");?>
